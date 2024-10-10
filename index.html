@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Odin Project Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="left-container">
+            <img id="logo" src="logo.png">
+            <img id="hero-image" src="family.png">
+        </div>
+
+        <div class="right-container">
+            <div class="header">
+                <span> Pawsome day to you fur parent! You are one step closer to becoming a Buddy. Fill out the form to receive updates on our exclusive promos.</span>
+            </div>
+
+            <div class="signup-form">
+                <form>
+                    <fieldset class="subheader-container">
+                        <span>Become a buddy now</span>
+                    </fieldset>
+
+                    <fieldset class="content-container">
+                        <div class="input-container">
+                            <div class="input-box">
+                                <label class="details" for="first-name">FIRST NAME*</label>
+                                <input type="text" id="first-name" required>
+                            </div>
+                            <div class="input-box">
+                                <label class="details" for="last-name">LAST NAME</label>
+                                <input type="text" id="last-name">
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-box">
+                                <label class="details" for="email">EMAIL*</label>
+                                <input type="text" id="email" required>
+                            </div>
+                            <div class="input-box">
+                                <label class="details" for="phone-number">PHONE NUMBER*</label>
+                                <input type="text" id="phone-number" required>
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-box">
+                                <label class="details" for="pwd1">PASSWORD*</label>
+                                <input type="password" id="pwd1" required>
+                            </div>
+                            <div class="input-box">
+                                <label class="details" for="pwd2">CONFIRM PASSWORD*</label>
+                                <input type="password" id="pwd2" required>
+                                <p id="alert">Passwords do not match</p>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="button-container">
+                        <div class="button">
+                            <button class="btn" type="submit">
+                                Create Account
+                            </button>
+                        </div>
+                
+                        <div class="login-container">
+                            <span>Already have an account?<a href=""> Log in</a></span>
+                        </div>
+                    </fieldset>
+
+                </form>
+            </div>  <!-- sign up form  -->
+        </div> <!-- right container  -->
+    </div>  <!-- main container  -->
+
+    <script>
+        const pwd1 = document.getElementById('pwd1');
+        const pwd2 = document.getElementById('pwd2');
+        const message = document.getElementById('alert');
+
+        function comparePasswords() {
+            if (pwd1.value.length > 0 && pwd2.value.length > 0) {
+                if (pwd1.value === pwd2.value) {
+                    message.style.opacity = "0"; 
+                } else {
+                    message.style.opacity = "1";  
+                }
+            }
+        }
+        pwd1.addEventListener('input', comparePasswords);
+        pwd2.addEventListener('input', comparePasswords);
+    </script>
+
+</body>
+
+</html>

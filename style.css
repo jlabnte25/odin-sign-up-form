@@ -1,0 +1,161 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+    appearance:none;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+
+/* Styling the general grid */
+
+* {
+    font-family: "Poppins", serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #365a8c;
+}
+
+body {
+    background-color: #f5e58b;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.34)  ;
+    margin: 3rem 0;
+    padding: 2em 1em;
+}
+
+/* 
+
+/* Left container */
+
+#logo {
+    width: 20vh;
+}
+
+#hero-image {
+    width: 400px;
+    min-width:400px;
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Right container */
+.right-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.header,.signup-form {
+    margin-left: 12px;
+}
+
+.signup-form .subheader-container span {
+    font-size: 1.6rem;
+}
+
+.signup-form .content-container,.subheader-container,.login-container,.button-container {
+    border: none;
+    margin: 0 0 2em 0;
+    padding: 0 0;
+}
+
+.signup-form .content-container .input-container {
+    display: flex;
+    gap: 5em;
+}
+
+.signup-form .content-container .input-container .input-box {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5em 0;
+}
+
+.signup-form .content-container .input-container .input-box input{
+    padding-left: 10px;
+    font-size: 14px;
+    width: 200px;
+    height: 30px;
+}
+
+.input-box input:focus {
+    border: 2px solid #6c9ce0; 
+    outline: none; 
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2); 
+    background-color: white;
+}
+
+
+.input-box input:invalid {
+    padding-left: 12px;
+    border-radius: 3px;
+    border: rgba(162, 66, 66, 0.365) solid 2px;
+    background-color: white;
+    outline:none;
+}
+
+
+.input-box input:valid {
+    padding-left: 12px;
+    border-radius: 3px;
+    border: rgba(0, 0, 0, 0.365) solid 2px;
+    background-color: white;
+    outline:none;
+}
+
+.button {
+    margin-top: 6em;
+    margin-bottom: 0.4em;
+}
+
+.button button {
+    background-color: #6c9ce0;
+    border: none;
+    color: white;
+    border-radius: 2px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 5px 10px;
+} 
+
+.button button:hover{
+    cursor: pointer;
+    color: #365a8c;
+    background-color: #f3df6a;
+}
+
+#alert {
+    color: rgba(162, 66, 66, 0.765);
+    font-size: 0.7em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
